@@ -1,0 +1,21 @@
+--------------------------------------------------------------------
+qtftdichip version 0.0.1
+--------------------------------------------------------------------
+
+Usage
+-----
+1. include qftdichip.pri into your qmake pro file
+2. set the environment variable QFTDICHIP_BACKEND to
+point to either the libftdi or the d2xx directory
+
+
+Changes
+-------
+* initial version
+
+You'll find the newest version of qtftdichip at:
+http://www.cute-cube.com
+
+--------------------------------------------------------------------
+www.cute-cube.com                                 2011-2021 CuteCube
+--------------------------------------------------------------------
