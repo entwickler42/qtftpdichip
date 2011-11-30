@@ -14,7 +14,7 @@ signals:
 	void readyRead();
 
 public:
-	QtFtdiChipReader(AFtdiChipPrivate* data) :
+	QtFtdiChipReader(QtFtdiChipPrivate* data) :
 		QThread(0),
 		d(data)
 	{
@@ -67,7 +67,7 @@ protected:
 	}
 
 private:
-	AFtdiChipPrivate* d;
+	QtFtdiChipPrivate* d;
 };
 
 class QtFtdiChipWriter :
@@ -79,7 +79,7 @@ signals:
 	void bytesWritten(qint64);
 
 public:
-	QtFtdiChipWriter(AFtdiChipPrivate* data) :
+	QtFtdiChipWriter(QtFtdiChipPrivate* data) :
 		QThread(0),
 		d(data)
 	{
@@ -127,7 +127,7 @@ protected:
 	}
 
 private:
-	AFtdiChipPrivate* d;
+	QtFtdiChipPrivate* d;
 };
 
 #endif 

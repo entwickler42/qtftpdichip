@@ -6,12 +6,13 @@
 #include <QList>
 #include <QMutex>
 
-#ifdef LIBFTDI
+#ifdef QTFTDICHIP_LIBFTDI
 #include "qtftdichiplistworker_libftdi.h"
-#else
-#include "qtftdichiplistworker_d2xx.h"
 #endif
 
+#ifdef QTFTDICHIP_D2XX
+#include "qtftdichiplistworker_d2xx.h"
+#endif
 
 class QtFtdiChipListPrivate
 		: public QObject

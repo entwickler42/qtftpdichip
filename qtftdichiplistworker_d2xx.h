@@ -6,10 +6,13 @@
 #include <QThread>
 #include <QScopedArrayPointer>
 
-#ifdef QTFTDICHIP_D2XX
+#ifdef Q_OS_WIN32
 #include <windows.h>
-#include <ftd2xx.h>
+#else
+#include <WinTypes.h>
 #endif
+
+#include <ftd2xx.h>
 
 
 class QtFtdiChipListWorker :

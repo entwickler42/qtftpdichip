@@ -14,7 +14,7 @@ class QtFtdiChipListWorker :
 
 signals:
 	void error(int);
-	void entry(AFtdiChipInformation);
+	void entry(QtFtdiChipInformation);
 
 public:
 	QtFtdiChipListWorker(QObject* parent=0) :
@@ -38,7 +38,7 @@ protected:
 		int status = 0;
 		struct ftdi_context handle;
 		struct ftdi_device_list *devlist;
-		AFtdiChipInformation dev_info;
+		QtFtdiChipInformation dev_info;
 
 		if( (status = ftdi_init(&handle)) < 0 ){
 			emit error(status);

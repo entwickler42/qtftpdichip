@@ -49,7 +49,7 @@ exists($$QTFTDICHIP_BACKEND/src/ftdi.h){
 		QTFTDICHIP_COPY_DLL.target = ftd2xx.dll	
 		QTFTDICHIP_COPY_DLL.commands = $$replace(QTFTDICHIP_COPY_DLL.commands, /, \\)
 		QMAKE_EXTRA_TARGETS += QTFTDICHIP_COPY_DLL
-		PRE_TARGETDEPS +=  ftd2xx.dll		
+		PRE_TARGETDEPS += ftd2xx.dll		
 	}else:unix{				
 		HEADERS += $$D2XX/ftd2xx.h $$D2XX/WinTypes.h
 		contains(QMAKE_HOST.arch, x86_64){
@@ -88,3 +88,6 @@ libftdi{
 }else{
 	error("BUG: WE SHOULD HAVE NEVER GOTTEN HERE!")
 }
+
+message($$SOURCES)
+message($$HEADERS)
